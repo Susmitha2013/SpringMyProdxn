@@ -1,0 +1,53 @@
+.border-md {
+    border-width: 2px;
+}
+
+.btn-facebook {
+    background: #c2b9b0;
+    border: none;
+}
+
+.btn-facebook:hover, .btn-facebook:focus {
+    background: #c2b9b0;
+    color: black;
+}
+
+.btn-twitter {
+    background: #c2b9b0;
+    border: none;
+}
+
+.btn-twitter:hover, .btn-twitter:focus {
+    background: #c2b9b0;
+    color: black;
+}
+
+
+
+/*
+*
+* ==========================================
+* FOR DEMO PURPOSES
+* ==========================================
+*
+*/
+
+body {
+    min-height: 100vh;
+}
+
+
+
+select.form-control {
+    height: 52px;
+    padding-left: 0.5rem;
+}
+
+.form-control::placeholder {
+    color: #ccc;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+.form-control:focus {
+    box-shadow: none;
+}

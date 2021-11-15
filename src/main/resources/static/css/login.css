@@ -1,0 +1,51 @@
+@charset "ISO-8859-1";
+body {
+	width: 100%;
+	background-color: whitesmoke;
+}
+
+.card {
+	border-radius: 5%;
+}
+
+.margintop {
+	margin-top: 5%;
+}
+
+.image {
+	text-align: center;
+}
+
+.btn-color {
+	background: #c2b9b0;
+	border: none;
+	color: white;
+	float: right;
+}
+
+.btn-color:hover {
+	background: #c2b9b0;
+	border: none;
+	color: black;
+}
+
+.socials {
+	float: left;
+	text-align: center;
+}
+
+.socials a {
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	border: 1px solid_ #fff;
+	border-radius: 50%;
+}
+
+.socials a:nth-child(1) {
+	background: lightyellow;
+}
+
+.socials a:nth-child(2) {
+	background: lightyellow;
+}
