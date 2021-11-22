@@ -17,6 +17,89 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+
+
+<style>
+@charset "ISO-8859-1";
+
+.dropbtn {
+	background-color: #c2b9b0;
+	color: rgba(0, 0, 0, .5);
+	padding: 8px;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+	background-color: grey;
+}
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #f1f1f1;
+	min-width: 160px;
+	overflow: auto;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+}
+
+.dropdown-content a {
+	color: black;
+	padding: 10px 1px;
+	text-decoration: none;
+	display: block;
+}
+
+.dropdown a:hover {
+	background-color: #ddd;
+}
+
+.show {
+	display: block;
+}
+
+body {
+	background-color: whitesmoke;
+}
+
+.nav-bg {
+	background-color: #c2b9b0;
+}
+
+.fistrowpad {
+	padding-top: 5%;
+}
+
+.cardcolor {
+	background-color: gainsboro;
+}
+
+.padleft {
+	padding-left: 20%;
+}
+
+.news {
+	padding-top: 5%;
+}
+
+.padtop {
+	padding-top: 5%;
+}
+
+.padleft1 {
+	padding-left: 5%;
+}
+</style>
+
+
+
 </head>
 <body>
 
@@ -55,6 +138,7 @@
 							an Account</a> <a href="#">Contact</a> <a href="#">Need Help?</a>
 
 					</div>
+
 				</div>
 			</ul>
 			<form class="form-inline my-2 my-lg-0">
@@ -333,6 +417,7 @@
 		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
 		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
 		crossorigin="anonymous"></script>
+
 
 </body>
 </html>

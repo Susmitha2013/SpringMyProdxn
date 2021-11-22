@@ -8,8 +8,11 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
+
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
+
 
 @Data
 @AllArgsConstructor
@@ -51,6 +54,10 @@ public class User implements Serializable{
 	@NotNull(message = "Confirm password cannot be null")
 	private String confirmPassword;
 	
+	private String to;
+	private String message;
+	private String subject;
+	
 	public User() {
 		
 	}
@@ -58,7 +65,7 @@ public class User implements Serializable{
 
 
 	public User( String firstName, String lastName, String phoneNumber, String email, String dob,
-			String newPassword, String confirmPassword) {
+		String newPassword, String confirmPassword,String to, String message, String subject) {
 		super();
 	
 		this.firstName = firstName;
@@ -68,6 +75,9 @@ public class User implements Serializable{
 		this.dob = dob;
 		this.newPassword = newPassword;
 		this.confirmPassword = confirmPassword;
+		this.to = to;
+		this.message = message;
+		this.subject = subject;
 	}
 
 	public String getFirstName() {
@@ -125,12 +135,45 @@ public class User implements Serializable{
 	public void setConfirmPassword(String confirmPassword) {
 		this.confirmPassword = confirmPassword;
 	}
+	public String getTo() {
+		return to;
+	}
 
+
+
+	public void setTo(String to) {
+		this.to = to;
+	}
+
+
+
+	public String getMessage() {
+		return message;
+	}
+
+
+
+	public void setMessage(String message) {
+		this.message = message;
+	}
+
+
+
+	public String getSubject() {
+		return subject;
+	}
+
+
+
+	public void setSubject(String subject) {
+		this.subject = subject;
+	}
 	@Override
 	public String toString() {
-		return "User [ firstName=" + firstName + ", lastName=" + lastName + ", phoneNumber="
-				+ phoneNumber + ", email=" + email + ", dob=" + dob + ", newPassword=" + newPassword
-				+ ", confirmPassword=" + confirmPassword + "]";
-	}
+		
+		return "User [firstName=" + firstName + ", lastName=" + lastName + ", phoneNumber=" + phoneNumber + ", email="
+		+ email + ", dob=" + dob + ", newPassword=" + newPassword + ", confirmPassword=" + confirmPassword
+		+ ", to=" + to + ", message=" + message + ", subject=" + subject + "]";
+}
 	
 }

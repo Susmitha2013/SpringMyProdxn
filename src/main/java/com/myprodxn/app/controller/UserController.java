@@ -59,7 +59,7 @@ public ModelAndView userLogin(@RequestParam(value = "email", required = false) S
 
 	if (name != null) {
 
-		mv.addObject("msg", "Welcome " + name + ", You have successfully logged in.");
+		mv.addObject("msg", name );
 		mv.setViewName("welcome");
 
 	} else {
@@ -75,6 +75,7 @@ public ModelAndView userLogin(@RequestParam(value = "email", required = false) S
 public String showHomePage(){
 	return "home";
 }
+
 
 }
 

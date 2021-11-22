@@ -7,6 +7,61 @@
       <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+<style>
+.border-md {
+    border-width: 2px;
+}
+
+.btn-facebook {
+    background: #c2b9b0;
+    border: none;
+}
+
+.btn-facebook:hover, .btn-facebook:focus {
+    background: #c2b9b0;
+    color: black;
+}
+
+.btn-twitter {
+    background: #c2b9b0;
+    border: none;
+}
+
+.btn-twitter:hover, .btn-twitter:focus {
+    background: #c2b9b0;
+    color: black;
+}
+
+
+
+/*
+*
+* ==========================================
+* FOR DEMO PURPOSES
+* ==========================================
+*
+*/
+
+body {
+    min-height: 100vh;
+}
+
+
+
+select.form-control {
+    height: 52px;
+    padding-left: 0.5rem;
+}
+
+.form-control::placeholder {
+    color: #ccc;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+.form-control:focus {
+    box-shadow: none;
+}
+</style>
 </head>
 <body>
 
@@ -21,7 +76,7 @@
            
         </div>
 
-        <!-- Registeration Form -->
+        <!-- Registration Form -->
         <div class="col-md-7 col-lg-6 ml-auto animated fadeInRight delay-0.9s">
             <form action='/json/postUser' method='post' >
                 <div class="row">
@@ -30,7 +85,7 @@
                     <div class="input-group col-lg-6 mb-4">
                        <div class="form-group">
     <label for="exampleInputEmail1">First Name :</label>
-    <input type="text" name="firstName" class="form-control" id="firstName" pattern="^[a-zA-Z]*$" maxlength="25"  placeholder="First Name">
+    <input type="text" name="firstName" class="form-control" id="firstName" pattern="^[a-zA-Z]*$" maxlength="25"  placeholder="First Name" required>
       <span id="alert"></span>
   </div>
                     </div>
@@ -39,7 +94,7 @@
                     <div class="input-group col-lg-6 mb-4">
                         <div class="form-group">
     <label for="exampleInputPassword1">Last Name :</label>
-    <input type="text" name="lastName" class="form-control" id="lastName" pattern="^[a-zA-Z]*$" maxlength="25" placeholder="Last Name">
+    <input type="text" name="lastName" class="form-control" id="lastName" pattern="^[a-zA-Z]*$" maxlength="25" placeholder="Last Name" required>
   </div>
                     </div>
                        <!-- Phone Number -->
@@ -47,7 +102,7 @@
                       
                         <div class="form-group">
     <label for="exampleInputEmail1">Phone Number :</label>
-   <input type="tel" name="phoneNumber" class="form-control" id="phoneNumber"  maxlength="10"placeholder="PH no"/>
+   <input type="tel" name="phoneNumber" class="form-control" id="phoneNumber"  maxlength="10"placeholder="PH no" required>
   </div> 
                     </div>.
 
@@ -55,14 +110,14 @@
                     <div class="input-group col-lg-6 mb-4">
                      <div class="form-group">
     <label for="exampleInputEmail1">Email address :</label>
-    <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email">
+    <input type="email" name="email" class="form-control" id="email"  placeholder="Email" required>
   </div>
                     </div>
                         <!-- D-O-B -->
                     <div class="input-group col-lg-6 mb-4">
             <div class="form-group">
     <label for="exampleInputPassword1">Date of Birth :</label><br>
-    <input type="date" name="dob" id="dob"   min="1990-01-01" max="2022-12-31" placeholder="DOB">
+    <input type="date" name="dob" id="dob"   min="1990-01-01" max="2022-12-31" placeholder="DOB" required>
   </div>
                     </div>
 
@@ -71,7 +126,7 @@
                      <div class="input-group col-lg-6 mb-4">
                              <div class="form-group">
     <label for="exampleInputEmail1">Password :</label>
-    <input type="password" name="newPassword"  class="form-control" id="newPassword"  pattern=".{8,}" placeholder="Password">
+    <input type="password" name="newPassword"  class="form-control" id="newPassword"  pattern=".{8,}" placeholder="Password" required>
   </div>    
                     </div>
 
@@ -79,7 +134,7 @@
                     <div class="input-group col-lg-6 mb-4">
                         <div class="form-group">
     <label for="exampleInputEmail1"> Confirm Password :</label>
-    <input type="password" name="confirmPassword"  class="form-control" id="confirmPassword"  pattern=".{8,}" placeholder=" Confirmed Password">
+    <input type="password" name="confirmPassword"  class="form-control" id="confirmPassword"  pattern=".{8,}" placeholder=" Confirmed Password" required>
   </div> 
                     </div>
                     

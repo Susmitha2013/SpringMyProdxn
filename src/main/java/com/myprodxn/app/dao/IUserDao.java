@@ -12,6 +12,10 @@ public interface IUserDao {
 
 		public abstract String loginUser(final User user);
 		
+		public abstract int checkEmail(String email);
+
+		public abstract int updatePassword(String newPassword, String confirmPassword,String email);
+		
 	}
 
 

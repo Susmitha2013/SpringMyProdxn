@@ -57,7 +57,7 @@ import com.myprodxn.app.domain.User;
 			@Override
 			public String loginUser(User user) {
 				
-				String sql = "SELECT first_name FROM users_info WHERE email=? AND password=?";
+				String sql = "SELECT first_name  FROM users_info WHERE email=? AND password=?";
 				
 				try {
 
@@ -70,6 +70,40 @@ import com.myprodxn.app.domain.User;
 					return null;
 				}
 			}
+
+			@Override
+			public int checkEmail(String email) {
+				String sql = "SELECT count(*) FROM users_info  WHERE email=?";
+
+				try {
+
+					int memberEmail = jdbcTemplate.queryForObject(sql, new Object[] {email},
+							Integer.class);
+			
+				return memberEmail;
+
+			} catch (Exception e) {
+				return 0;
+			}
+			}
+
+				@Override
+				public int updatePassword(String password, String confirm_Password,String email) {
+
+					System.out.println("inside updatePassword method");
+
+					String sql = "update users_info set password=?,confirm_password=? where email=?";
+
+					try {
+						int updateCount = jdbcTemplate.update(sql,
+								new Object[] {password,confirm_Password,email});
+						LOG.info("Record Updated Successfull:" + updateCount);
+					} catch (DataAccessException e) {
+						LOG.error(e);
+					}
+
+					return 0;
+				}
 		}
 		
 
